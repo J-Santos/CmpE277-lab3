@@ -24,15 +24,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func additionOperation(sender: UIButton) {
+    @IBAction func additionOperation(_ sender: UIButton) {
         print("Addition button was pressed")
     }
 
-    @IBAction func subtractionOperation(sender: UIButton) {
+    @IBAction func subtractionOperation(_ sender: UIButton) {
         print("Subtraction button was pressed")
     }
 
-    @IBAction func multiplyOperation(sender: UIButton) {
+    @IBAction func multiplyOperation(_ sender: UIButton) {
         print("Multiplication button was pressed")
     }
 
