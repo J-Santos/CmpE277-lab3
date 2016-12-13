@@ -48,30 +48,38 @@
                                     <rect key="frame" x="121" y="124" width="158" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhS-lR-KYL">
-                                <rect key="frame" x="215" y="315" width="169" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-o8-3yH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Multiplication"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="116" y="320" width="169" height="30"/>
+                                    <rect key="frame" x="106" y="321" width="188" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="mulitplicationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1JG-9j-kLw"/>
-                                    <action selector="multiplicationOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxa-Ze-LnD"/>
+                                    <action selector="multiplyOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ja1-AF-OG0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="4cT-o8-3yH"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="4cT-o8-3yH"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addButton" destination="ti2-xv-LN0" id="qdd-Xb-HAB"/>
-                        <outlet property="multiplicationButton" destination="HhS-lR-KYL" id="eaN-mk-3kD"/>
                         <outlet property="subtractionButton" destination="CfC-u9-X2l" id="4h6-9l-1vV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="389"/>
+            <point key="canvasLocation" x="304.5" y="389"/>
         </scene>
     </scenes>
 </document>

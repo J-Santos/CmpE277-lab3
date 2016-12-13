@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var addButton: UIButton!
     @IBOutlet var subtractionButton: UIButton!
-    @IBOutlet var multiplicationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +32,10 @@ class ViewController: UIViewController {
         print("Subtraction button was pressed")
     }
 
-    @IBAction func multiplicationQuizOperation(sender: UIButton) {
-        print("multiplication was pressed")
+    @IBAction func multiplyOperation(sender: UIButton) {
+        print("Multiplication button was pressed")
     }
+
     
     
 }
