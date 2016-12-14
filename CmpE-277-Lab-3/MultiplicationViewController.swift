@@ -25,10 +25,14 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //resultTextField.delegate = self
-        generateRandomValues()
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        number = 0;
+        numberCorrectAnswers = 0
+        generateRandomValues()
+    }
+
     
     func generateRandomValues(){
         number += 1
