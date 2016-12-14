@@ -202,16 +202,19 @@
 				TargetAttributes = {
 					565CF5CB1DFE85AC00C367E4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
+
+						LastSwiftMigration = 0820;
 					};
 					565CF5DF1DFE85AC00C367E4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						TestTargetID = 565CF5CB1DFE85AC00C367E4;
 					};
 					565CF5EA1DFE85AC00C367E4 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
+
+						LastSwiftMigration = 0820;
+
 						TestTargetID = 565CF5CB1DFE85AC00C367E4;
 					};
 				};
