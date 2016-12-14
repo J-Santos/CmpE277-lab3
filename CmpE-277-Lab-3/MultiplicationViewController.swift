@@ -25,6 +25,7 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultTextField.keyboardType = UIKeyboardType.decimalPad
     }
     
     override func viewWillAppear(_ animated: Bool) {
