@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49095CDF1E00B12100AD9379 /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49095CDE1E00B12100AD9379 /* AdditionViewController.swift */; };
+		49095CE11E00C4F600AD9379 /* SubstractionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49095CE01E00C4F600AD9379 /* SubstractionViewController.swift */; };
+		49095CE31E00C50C00AD9379 /* MultiplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49095CE21E00C50C00AD9379 /* MultiplicationViewController.swift */; };
 		565CF5D01DFE85AC00C367E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565CF5CF1DFE85AC00C367E4 /* AppDelegate.swift */; };
-		565CF5D21DFE85AC00C367E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565CF5D11DFE85AC00C367E4 /* ViewController.swift */; };
+		565CF5D21DFE85AC00C367E4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565CF5D11DFE85AC00C367E4 /* MainViewController.swift */; };
 		565CF5D51DFE85AC00C367E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565CF5D31DFE85AC00C367E4 /* Main.storyboard */; };
 		565CF5D71DFE85AC00C367E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 565CF5D61DFE85AC00C367E4 /* Assets.xcassets */; };
 		565CF5DA1DFE85AC00C367E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565CF5D81DFE85AC00C367E4 /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49095CDE1E00B12100AD9379 /* AdditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
+		49095CE01E00C4F600AD9379 /* SubstractionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstractionViewController.swift; sourceTree = "<group>"; };
+		49095CE21E00C50C00AD9379 /* MultiplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultiplicationViewController.swift; path = ../MultiplicationViewController.swift; sourceTree = "<group>"; };
 		565CF5CC1DFE85AC00C367E4 /* CmpE-277-Lab-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CmpE-277-Lab-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		565CF5CF1DFE85AC00C367E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		565CF5D11DFE85AC00C367E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		565CF5D11DFE85AC00C367E4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		565CF5D41DFE85AC00C367E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		565CF5D61DFE85AC00C367E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		565CF5D91DFE85AC00C367E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,12 +103,15 @@
 		565CF5CE1DFE85AC00C367E4 /* CmpE-277-Lab-3 */ = {
 			isa = PBXGroup;
 			children = (
+				49095CE21E00C50C00AD9379 /* MultiplicationViewController.swift */,
 				565CF5CF1DFE85AC00C367E4 /* AppDelegate.swift */,
-				565CF5D11DFE85AC00C367E4 /* ViewController.swift */,
+				565CF5D11DFE85AC00C367E4 /* MainViewController.swift */,
 				565CF5D31DFE85AC00C367E4 /* Main.storyboard */,
 				565CF5D61DFE85AC00C367E4 /* Assets.xcassets */,
 				565CF5D81DFE85AC00C367E4 /* LaunchScreen.storyboard */,
 				565CF5DB1DFE85AC00C367E4 /* Info.plist */,
+				49095CDE1E00B12100AD9379 /* AdditionViewController.swift */,
+				49095CE01E00C4F600AD9379 /* SubstractionViewController.swift */,
 			);
 			path = "CmpE-277-Lab-3";
 			sourceTree = "<group>";
@@ -188,18 +197,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CmpE;
 				TargetAttributes = {
 					565CF5CB1DFE85AC00C367E4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					565CF5DF1DFE85AC00C367E4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 565CF5CB1DFE85AC00C367E4;
 					};
 					565CF5EA1DFE85AC00C367E4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 565CF5CB1DFE85AC00C367E4;
 					};
 				};
@@ -256,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				565CF5D21DFE85AC00C367E4 /* ViewController.swift in Sources */,
+				49095CDF1E00B12100AD9379 /* AdditionViewController.swift in Sources */,
+				565CF5D21DFE85AC00C367E4 /* MainViewController.swift in Sources */,
+				49095CE11E00C4F600AD9379 /* SubstractionViewController.swift in Sources */,
 				565CF5D01DFE85AC00C367E4 /* AppDelegate.swift in Sources */,
+				49095CE31E00C50C00AD9379 /* MultiplicationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +341,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,8 +389,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -392,6 +411,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -405,6 +425,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe277.CmpE-277-Lab-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -416,6 +437,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe277.CmpE-277-Lab-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -427,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe277.CmpE-277-Lab-3Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CmpE-277-Lab-3.app/CmpE-277-Lab-3";
 			};
 			name = Debug;
@@ -439,6 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe277.CmpE-277-Lab-3Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CmpE-277-Lab-3.app/CmpE-277-Lab-3";
 			};
 			name = Release;
@@ -450,6 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe277.CmpE-277-Lab-3UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "CmpE-277-Lab-3";
 			};
 			name = Debug;
@@ -461,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe277.CmpE-277-Lab-3UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "CmpE-277-Lab-3";
 			};
 			name = Release;
@@ -484,6 +510,7 @@
 				565CF5F61DFE85AC00C367E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		565CF5F71DFE85AC00C367E4 /* Build configuration list for PBXNativeTarget "CmpE-277-Lab-3Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +519,7 @@
 				565CF5F91DFE85AC00C367E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		565CF5FA1DFE85AC00C367E4 /* Build configuration list for PBXNativeTarget "CmpE-277-Lab-3UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +528,7 @@
 				565CF5FC1DFE85AC00C367E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
