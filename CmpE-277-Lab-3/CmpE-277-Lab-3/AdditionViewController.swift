@@ -14,6 +14,8 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var secondOperand: UILabel!
     @IBOutlet var numberQuestion: UILabel!
     @IBOutlet var resultTextField: UITextField!
+    @IBOutlet var countDownLabel: UILabel!
+    
     var inputResult : Int?{
         didSet{
             verifyValue()
@@ -22,15 +24,29 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
     var result : Int?
     var number : Int = 0
     var numberCorrectAnswers : Int = 0
+    var count : Int = 10
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         number = 0;
+        count = 10
         numberCorrectAnswers = 0
+        self.countDownLabel.text = String(count)
         generateRandomValues()
+    }
+    
+    func update() {
+        if(count > 0) {
+            count -= 1
+        }else{
+            count = 10
+            generateRandomValues()
+        }
+        self.countDownLabel.text = String(count)
     }
     
     func generateRandomValues(){
@@ -44,10 +60,6 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
         resultTextField.text = ""
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.becomeFirstResponder()
-        return true
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
