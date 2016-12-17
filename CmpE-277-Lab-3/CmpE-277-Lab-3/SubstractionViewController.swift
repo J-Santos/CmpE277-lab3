@@ -15,7 +15,7 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var numberQuestion: UILabel!
     @IBOutlet var resultTextField: UITextField!
     @IBOutlet var countDownLabel: UILabel!
-
+    
     var inputResult : Int?{
         didSet{
             verifyValue()
@@ -30,8 +30,9 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SubstractionViewController.back))
+        let newBackButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SubstractionViewController.back))
         self.navigationItem.leftBarButtonItem = newBackButton
     }
     
@@ -41,10 +42,10 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
             count -= 1
             self.countDownLabel.text = String(count)
         }else{
+            checkCurrentValue()
             generateRandomValues()
         }
     }
-
     
     override func viewWillAppear(_ animated: Bool) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
@@ -116,10 +117,33 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     }
     
     func verifyValue(){
-        print("Verifying value");
+        print("Verifying value")
         if result == inputResult{
+            if(number < 10){
+                showCorrectnessAlert(msg: "Correct!")
+            }
             numberCorrectAnswers += 1
             generateRandomValues()
+        }
+    }
+    
+    func showCorrectnessAlert(msg: String) -> Void {
+        let alertController = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+        self.present(alertController, animated: true, completion:nil)
+        alertController.dismiss(animated: true, completion: nil)
+    }
+    
+    func checkCurrentValue() -> Void {
+        let current_val = Int(resultTextField.text!)
+        if(result == current_val){
+            numberCorrectAnswers += 1;
+            if(number < 10){
+                showCorrectnessAlert(msg: "Correct!")
+            }
+        }else{
+            if(number < 10){
+                showCorrectnessAlert(msg: "Incorrect")
+            }
         }
     }
     
@@ -187,10 +211,7 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func numberEnter(_ sender: Any) {
         print("Number Enter was pressed")
-        let current_val = Int(resultTextField.text!)
-        if(result == current_val){
-            numberCorrectAnswers += 1;
-        }
+        checkCurrentValue()
         generateRandomValues()
     }
 }

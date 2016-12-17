@@ -31,7 +31,7 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AdditionViewController.back))
+        let newBackButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AdditionViewController.back))
         self.navigationItem.leftBarButtonItem = newBackButton
 
     }
