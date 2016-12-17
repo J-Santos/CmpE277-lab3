@@ -67,6 +67,7 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     
     func generateRandomValues(){
         if(number == 10){
+            timer.invalidate()
             print("Your total score was: \(numberCorrectAnswers)/10")
             let msg = "Your total score was: \(numberCorrectAnswers)/10"
             let alertController = UIAlertController(title: "Score", message: msg, preferredStyle: .alert)
