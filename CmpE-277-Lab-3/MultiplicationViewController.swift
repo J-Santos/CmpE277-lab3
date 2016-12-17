@@ -30,7 +30,7 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MultiplicationViewController.back))
+        let newBackButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MultiplicationViewController.back))
         self.navigationItem.leftBarButtonItem = newBackButton
 
     }
