@@ -30,7 +30,6 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(SubstractionViewController.update), userInfo: nil, repeats: true)
         self.navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SubstractionViewController.back))
         self.navigationItem.leftBarButtonItem = newBackButton
@@ -110,10 +109,6 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.becomeFirstResponder()
-        return true
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
