@@ -29,24 +29,44 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AdditionViewController.back))
+        self.navigationItem.leftBarButtonItem = newBackButton
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         number = 0;
-        count = 10
         numberCorrectAnswers = 0
-        self.countDownLabel.text = String(count)
         generateRandomValues()
     }	
     
     func update() {
         if(count > 0) {
             count -= 1
+            self.countDownLabel.text = String(count)
         }else{
-            count = 10
             generateRandomValues()
         }
-        self.countDownLabel.text = String(count)
+    }
+    
+    func back(sender: UIBarButtonItem) {
+        let msg = "Are you sure you want to quit this quiz?"
+        let alertController = UIAlertController(title: "Quiz", message: msg, preferredStyle: .alert)
+        
+        let actionYes = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            _ = self.navigationController?.popViewController(animated: true)
+            print("You've pressed the Yes button");
+        }
+        let actionNo = UIAlertAction(title: "Cancel", style: .default) { (action:UIAlertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+            print("You've pressed the No button");
+        }
+        
+        alertController.addAction(actionYes)
+        alertController.addAction(actionNo)
+        self.present(alertController, animated: true, completion:nil)
+        
     }
     
     func generateRandomValues(){
@@ -63,6 +83,8 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
             alertController.addAction(actionYes)
             self.present(alertController, animated: true, completion:nil)
         }else{
+            count = 10
+            self.countDownLabel.text = String(count)
             number += 1
             let firstInt : Int = Int(arc4random_uniform(9))
             let secondInt : Int = Int(arc4random_uniform(9))

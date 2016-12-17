@@ -28,29 +28,28 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(SubstractionViewController.update), userInfo: nil, repeats: true)
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(SubstractionViewController.back))
+        self.navigationItem.leftBarButtonItem = newBackButton
     }
     
 
     func update() {
         if(count > 0) {
             count -= 1
+            self.countDownLabel.text = String(count)
         }else{
-            count = 10
             generateRandomValues()
         }
-        self.countDownLabel.text = String(count)
     }
 
     
-    override func viewWillDisappear(_ animated : Bool) {
+    override func viewWillAppear(_ animated : Bool) {
         print("view will disappear")
-        
         super.viewWillDisappear(animated)
         number = 0;
-        count = 10
         numberCorrectAnswers = 0
-        self.countDownLabel.text = String(count)
         generateRandomValues()
         /*
         if (self.isMovingFromParentViewController){
@@ -74,6 +73,25 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
 
     }
     
+    func back(sender: UIBarButtonItem) {
+        let msg = "Are you sure you want to quit this quiz?"
+        let alertController = UIAlertController(title: "Quiz", message: msg, preferredStyle: .alert)
+        
+        let actionYes = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            _ = self.navigationController?.popViewController(animated: true)
+            print("You've pressed the Yes button");
+        }
+        let actionNo = UIAlertAction(title: "Cancel", style: .default) { (action:UIAlertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+            print("You've pressed the No button");
+        }
+        
+        alertController.addAction(actionYes)
+        alertController.addAction(actionNo)
+        self.present(alertController, animated: true, completion:nil)
+        
+    }
+    
     func generateRandomValues(){
         if(number == 10){
             print("Your total score was: \(numberCorrectAnswers)/10")
@@ -89,6 +107,8 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
             self.present(alertController, animated: true, completion:nil)
         }else{
             number += 1
+            count = 10
+            self.countDownLabel.text = String(count)
             var firstInt : Int = Int(arc4random_uniform(9))
             var secondInt : Int = Int(arc4random_uniform(9))
             if(secondInt > firstInt){

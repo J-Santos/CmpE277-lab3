@@ -27,17 +27,37 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
+        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MultiplicationViewController.update), userInfo: nil, repeats: true)
+        self.navigationItem.hidesBackButton = true
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MultiplicationViewController.back))
+        self.navigationItem.leftBarButtonItem = newBackButton
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         number = 0;
-        count = 10
         numberCorrectAnswers = 0
-        self.countDownLabel.text = String(count)
         generateRandomValues()
     }
 
+    func back(sender: UIBarButtonItem) {
+        let msg = "Are you sure you want to quit this quiz?"
+        let alertController = UIAlertController(title: "Quiz", message: msg, preferredStyle: .alert)
+        
+        let actionYes = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            _ = self.navigationController?.popViewController(animated: true)
+            print("You've pressed the Yes button");
+        }
+        let actionNo = UIAlertAction(title: "Cancel", style: .default) { (action:UIAlertAction) in
+            alertController.dismiss(animated: true, completion: nil)
+            print("You've pressed the No button");
+        }
+        
+        alertController.addAction(actionYes)
+        alertController.addAction(actionNo)
+        self.present(alertController, animated: true, completion:nil)
+        
+    }
     
     func generateRandomValues(){
         if(number == 10){
@@ -54,6 +74,8 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
             self.present(alertController, animated: true, completion:nil)
         }else{
             number += 1
+            count = 10
+            self.countDownLabel.text = String(count)
             let firstInt : Int = Int(arc4random_uniform(9))
             let secondInt : Int = Int(arc4random_uniform(9))
             self.firstOperand.text = String(firstInt)
@@ -67,30 +89,18 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     func update() {
         if(count > 0) {
             count -= 1
+            self.countDownLabel.text = String(count)
         }else{
-            count = 10
             generateRandomValues()
         }
-        self.countDownLabel.text = String(count)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.becomeFirstResponder()
-        return true
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    /*@IBAction func farenheitFieldEditingText(textField: UITextField){
-        if let text = textField.text, let value = Int(text){
-            inputResult = value
-        }else{
-            inputResult = nil
-        }
-    }*/
     
     func verifyValue(){
         print("Verifying value");
