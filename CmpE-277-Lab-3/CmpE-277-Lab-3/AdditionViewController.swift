@@ -52,6 +52,7 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
             count -= 1
             self.countDownLabel.text = String(count)
         }else{
+            checkCurrentValue()
             generateRandomValues()
         }
     }
@@ -111,10 +112,33 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
     }
 
     func verifyValue(){
-        print("Verifying value");
+        //print("Verifying value");
         if result == inputResult{
+            if(number < 10){
+                showCorrectnessAlert(msg: "Correct!")
+            }
             numberCorrectAnswers += 1;
             generateRandomValues()
+        }
+    }
+    
+    func showCorrectnessAlert(msg: String) -> Void {
+        let alertController = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+        self.present(alertController, animated: true, completion:nil)
+        alertController.dismiss(animated: true, completion: nil)
+    }
+    
+    func checkCurrentValue() -> Void {
+        let current_val = Int(resultTextField.text!)
+        if(result == current_val){
+            numberCorrectAnswers += 1;
+            if(number < 10){
+                showCorrectnessAlert(msg: "Correct!")
+            }
+        }else{
+            if(number < 10){
+                showCorrectnessAlert(msg: "Incorrect")
+            }
         }
     }
     
@@ -127,65 +151,66 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func numberSeven(_ sender: Any) {
         setDisplayText(str: String(7))
-        print("Number Seven was pressed")
+        //print("Number Seven was pressed")
     }
     
     @IBAction func numberEight(_ sender: Any) {
         setDisplayText(str: String(8))
-        print("Number Eight was pressed")
+        //print("Number Eight was pressed")
     }
     
     @IBAction func numberNine(_ sender: Any) {
         setDisplayText(str: String(9))
-        print("Number Nine was pressed")
+        //print("Number Nine was pressed")
     }
     
     @IBAction func numberFour(_ sender: Any) {
         setDisplayText(str: String(4))
-        print("Number Four was pressed")
+        //print("Number Four was pressed")
     }
     
     @IBAction func numberFive(_ sender: Any) {
         setDisplayText(str: String(5))
-        print("Number Five was pressed")
+        //print("Number Five was pressed")
     }
     
     @IBAction func numberSix(_ sender: Any) {
         setDisplayText(str: String(6))
-        print("Number Six was pressed")
+        //print("Number Six was pressed")
     }
     
     @IBAction func numberOne(_ sender: Any) {
         setDisplayText(str: String(1))
-        print("Number One was pressed")
+        //print("Number One was pressed")
     }
     
     @IBAction func numberTwo(_ sender: Any) {
         setDisplayText(str: String(2))
-        print("Number Two was pressed")
+        //print("Number Two was pressed")
     }
     
     @IBAction func numberThree(_ sender: Any) {
         setDisplayText(str: String(3))
-        print("Number Three was pressed")
+        //print("Number Three was pressed")
     }
     
     @IBAction func numberClear(_ sender: Any) {
         resultTextField.text = ""
-        print("Number Clear was pressed")
+        //print("Number Clear was pressed")
     }
     
     @IBAction func numberZero(_ sender: Any) {
         setDisplayText(str: String(0))
-        print("Number Zero was pressed")
+        //print("Number Zero was pressed")
     }
     
     @IBAction func numberEnter(_ sender: Any) {
-        print("Number Enter was pressed")
-        let current_val = Int(resultTextField.text!)
+        //print("Number Enter was pressed")
+        /*let current_val = Int(resultTextField.text!)
         if(result == current_val){
             numberCorrectAnswers += 1;
-        }
+        }*/
+        checkCurrentValue()
         generateRandomValues()
     }
     
