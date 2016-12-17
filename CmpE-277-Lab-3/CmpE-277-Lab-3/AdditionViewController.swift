@@ -24,7 +24,7 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
     var result : Int?
     var number : Int = 0
     var numberCorrectAnswers : Int = 0
-    var count : Int = 10
+    var count : Int = 5
     var timer = Timer()
     
     override func viewDidLoad() {
@@ -91,7 +91,7 @@ class AdditionViewController: UIViewController,UITextFieldDelegate {
             alertController.addAction(actionYes)
             self.present(alertController, animated: true, completion:nil)
         }else{
-            count = 10
+            count = 5
             self.countDownLabel.text = String(count)
             number += 1
             let firstInt : Int = Int(arc4random_uniform(9))

@@ -24,7 +24,7 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     var result : Int?
     var number : Int = 0
     var numberCorrectAnswers : Int = 0
-    var count : Int = 10
+    var count : Int = 5
     var timer = Timer()
 
     
@@ -93,7 +93,7 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
             self.present(alertController, animated: true, completion:nil)
         }else{
             number += 1
-            count = 10
+            count = 5
             self.countDownLabel.text = String(count)
             var firstInt : Int = Int(arc4random_uniform(9))
             var secondInt : Int = Int(arc4random_uniform(9))
