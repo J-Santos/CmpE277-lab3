@@ -124,9 +124,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="farenheitFieldEditingTextWithTextField:" destination="OMp-wv-Te9" eventType="editingChanged" id="KaY-hC-4vY"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFu-UV-STF">
                                 <rect key="frame" x="317" y="72" width="42" height="21"/>
@@ -204,7 +201,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="farenheitFieldEditingTextWithTextField:" destination="rxl-rx-skB" eventType="editingChanged" id="zxx-3n-LV7"/>
                                     <outlet property="delegate" destination="rxl-rx-skB" id="ptz-CF-tfZ"/>
                                 </connections>
                             </textField>
@@ -281,7 +277,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="farenheitFieldEditingTextWithTextField:" destination="C6k-tF-pdt" eventType="editingChanged" id="aI3-qX-ibZ"/>
                                     <outlet property="delegate" destination="C6k-tF-pdt" id="b67-m2-rnj"/>
                                 </connections>
                             </textField>
