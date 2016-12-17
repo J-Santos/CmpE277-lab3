@@ -25,6 +25,8 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     var number : Int = 0
     var numberCorrectAnswers : Int = 0
     var count : Int = 10
+    var timer = Timer()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,39 +47,23 @@ class SubstractionViewController: UIViewController,UITextFieldDelegate {
     }
 
     
-    override func viewWillAppear(_ animated : Bool) {
-        print("view will disappear")
-        super.viewWillDisappear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
         number = 0;
         numberCorrectAnswers = 0
         generateRandomValues()
-        /*
-        if (self.isMovingFromParentViewController){
-            print("Back button was pressed")
-            let msg = "Are you sure you want to exit?"
-            let alertController = UIAlertController(title: "Exit", message: msg, preferredStyle: .alert)
-            let actionYes = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                _ = self.navigationController?.popViewController(animated: true)
-                print("You've pressed the Yes button");
-            }
-            
-            let actionNo = UIAlertAction(title: "Cancel", style: .default) { (action:UIAlertAction) in
-             print("You've pressed No button");
-             }
-            
-            alertController.addAction(actionYes)
-            alertController.addAction(actionNo)
-            self.present(alertController, animated: true, completion:nil)
-            // Your code...
-        }*/
-
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+
     
     func back(sender: UIBarButtonItem) {
         let msg = "Are you sure you want to quit this quiz?"
         let alertController = UIAlertController(title: "Quiz", message: msg, preferredStyle: .alert)
         
-        let actionYes = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+        let actionYes = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
             _ = self.navigationController?.popViewController(animated: true)
             print("You've pressed the Yes button");
         }

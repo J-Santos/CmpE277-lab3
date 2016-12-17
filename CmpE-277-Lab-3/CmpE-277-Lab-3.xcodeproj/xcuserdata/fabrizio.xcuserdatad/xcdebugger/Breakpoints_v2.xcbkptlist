@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "verifyValue()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "generateRandomValues()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
             landmarkName = "setDisplayText(str:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "setDisplayText(str:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "generateRandomValues()"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,27 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CmpE-277-Lab-3/SubstractionViewController.swift"
-            timestampString = "503628034.33441"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
-            timestampString = "503629561.087377"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "numberSeven(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,13 +154,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CmpE-277-Lab-3/SubstractionViewController.swift"
-            timestampString = "503629273.663697"
+            timestampString = "503630218.405924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "generateRandomValues()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CmpE-277-Lab-3/AdditionViewController.swift"
+            timestampString = "503630072.083368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "AdditionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CmpE_277_Lab_3.AdditionViewController.timer.setter : __ObjC.Timer"
+                  moduleName = "CmpE-277-Lab-3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabrizio/Desktop/CmpE277-lab3/CmpE-277-Lab-3/CmpE-277-Lab-3/AdditionViewController.swift"
+                  timestampString = "503630219.551919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CmpE_277_Lab_3.AdditionViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; CmpE_277_Lab_3.AdditionViewController"
+                  moduleName = "CmpE-277-Lab-3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabrizio/Desktop/CmpE277-lab3/CmpE-277-Lab-3/CmpE-277-Lab-3/AdditionViewController.swift"
+                  timestampString = "503630219.556781"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "297">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CmpE_277_Lab_3.AdditionViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CmpE_277_Lab_3.AdditionViewController&gt;"
+                  moduleName = "CmpE-277-Lab-3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabrizio/Desktop/CmpE277-lab3/CmpE-277-Lab-3/CmpE-277-Lab-3/AdditionViewController.swift"
+                  timestampString = "503630219.561767"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "253">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

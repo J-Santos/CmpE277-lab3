@@ -24,10 +24,11 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     var number : Int = 0
     var numberCorrectAnswers : Int = 0
     var count : Int = 10
+    var timer = Timer()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _ = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(MultiplicationViewController.update), userInfo: nil, repeats: true)
         self.navigationItem.hidesBackButton = true
         let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MultiplicationViewController.back))
         self.navigationItem.leftBarButtonItem = newBackButton
@@ -35,16 +36,21 @@ class MultiplicationViewController: UIViewController,UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AdditionViewController.update), userInfo: nil, repeats: true)
         number = 0;
         numberCorrectAnswers = 0
         generateRandomValues()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
     }
 
     func back(sender: UIBarButtonItem) {
         let msg = "Are you sure you want to quit this quiz?"
         let alertController = UIAlertController(title: "Quiz", message: msg, preferredStyle: .alert)
         
-        let actionYes = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+        let actionYes = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
             _ = self.navigationController?.popViewController(animated: true)
             print("You've pressed the Yes button");
         }
